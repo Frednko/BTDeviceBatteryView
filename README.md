@@ -38,6 +38,17 @@ powershell -ExecutionPolicy Bypass -File app\build.ps1
 产物在 `dist\BatteryBar.exe`；若存在 `build\bleagent\dist2\BleAgent`，会一并复制到
 `dist\tools\BleAgent`（苹果 / 小米耳机需要的 BLE 广播助手）。
 
+## 发布打包
+
+```powershell
+powershell -ExecutionPolicy Bypass -File app\release.ps1            # 只出 zip
+powershell -ExecutionPolicy Bypass -File app\release.ps1 -Tag       # 顺便打 tag
+powershell -ExecutionPolicy Bypass -File app\release.ps1 -Tag -Upload   # 装了 gh CLI 可直接发 Release
+```
+
+产物：`dist\release\BatteryBar-<版本>-win-x64\`（可直接拷走运行）与同名 `.zip`，
+脚本会打印文件数、压缩包大小和 SHA256。版本号取自 `app\src\AssemblyInfo.cs`。
+
 ## 安装
 
 ```powershell

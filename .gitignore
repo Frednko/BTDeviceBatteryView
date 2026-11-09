@@ -11,3 +11,4 @@ dist/tools/
 Thumbs.db
 desktop.ini
 app/refs/
+dist/release/
