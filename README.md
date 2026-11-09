@@ -44,6 +44,7 @@ powershell -ExecutionPolicy Bypass -File app\build.ps1
 powershell -ExecutionPolicy Bypass -File app\release.ps1            # 只出 zip
 powershell -ExecutionPolicy Bypass -File app\release.ps1 -Tag       # 顺便打 tag
 powershell -ExecutionPolicy Bypass -File app\release.ps1 -Tag -Upload   # 装了 gh CLI 可直接发 Release
+powershell -ExecutionPolicy Bypass -File app\tools\create_release.ps1   # 没装 gh 时：用 GCM 里缓存的 GitHub 凭据调用 API 建 Release 并上传 zip
 ```
 
 产物：`dist\release\BatteryBar-<版本>-win-x64\`（可直接拷走运行）与同名 `.zip`，
