@@ -1,0 +1,13 @@
+﻿# 编译产物
+app/obj/
+build/
+dist/BatteryBar.exe
+dist/tools/
+
+# 系统 / 编辑器
+.vs/
+*.user
+*.suo
+Thumbs.db
+desktop.ini
+app/refs/
